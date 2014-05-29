@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'git_diff'
+
+require 'git_diff/app'
+
+GitDiffApp.new.run

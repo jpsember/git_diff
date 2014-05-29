@@ -1,0 +1,40 @@
+
+Recording unit test; First of repeated call, will forget (prefix=forget_1, arguments=-d 1)
+(skipping file that was created: foo2)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+might live. It is altogether fitting and proper that we shou.|...|        might live. It is altogether fitting and proper that we shou.|...|
+                                                                     .+   Four score and seven years ago our fathers brought forth on .|...|
+                                                                     .+   new nation, conceived in liberty, and dedicated to the propo.|...|
+                                                                     .+   men are created equal.                                            
+                                                                     .+                                                                     
+                                                                     .+   Now we are engaged in a great civil war, testing whether tha.|...|
+                                                                     .+   nation so conceived and so dedicated, can long endure. We ar.|...|
+                                                                     .+   battlefield of that war. We have come to dedicate a portion .|...|
+                                                                     .+   as a final resting place for those who here gave their lives.|...|
+                                                                     .+   might live. It is altogether fitting and proper that we shou.|...|
+
+-----------------------------------------------------------------   bar   ------------------------------------------------------------------
+a)ccept, e)dit, R)evert, s)kip, S)kipfile, q)uit, ag)ain: a
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Gettysburg                                                           ++   Four score and seven years ago our fathers brought forth on .|...|
+                                                                     .+   new nation, conceived in liberty, and dedicated to the propo.|...|
+                                                                     .+   men are created equal.                                            
+                                                                     .+                                                                     
+                                                                     .+   Now we are engaged in a great civil war, testing whether tha.|...|
+                                                                     .+   nation so conceived and so dedicated, can long endure. We ar.|...|
+                                                                     .+   battlefield of that war. We have come to dedicate a portion .|...|
+                                                                     .+   as a final resting place for those who here gave their lives.|...|
+                                                                     .+   might live. It is altogether fitting and proper that we shou.|...|
+
+----------------------------------------------------------------   delta   -----------------------------------------------------------------
+a)ccept, e)dit, R)evert, s)kip, S)kipfile, q)uit, ag)ain: a
+

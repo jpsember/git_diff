@@ -1,0 +1,4 @@
+
+Recording unit test; Second of repeated call, should remember (prefix=no_forget_2, arguments=-d 1)
+(skipping file that was created: foo2)
+
