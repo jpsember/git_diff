@@ -2,8 +2,8 @@ require 'rake'
 
 Gem::Specification.new do |s|
   s.name        = 'git_diff'
-  s.version     = '0.0.0'
-  s.date        = '2013-12-04'
+  s.version     = '0.1.0'
+  s.date        = '2015-03-29'
   s.summary     = "Interactive git diff utility"
   s.description = <<-EOS
     Performs an interactive 'git diff' from the command line, and gives the
@@ -18,7 +18,7 @@ EOS
                       'test/**/*',
                       ]
   s.executables << 'gitdiff'
-  s.add_runtime_dependency 'git_repo'
+  s.add_runtime_dependency 'git_repo', '>= 0.1'
   s.add_runtime_dependency 'backup_set'
 
   s.homepage = 'http://www.cs.ubc.ca/~jpsember'
