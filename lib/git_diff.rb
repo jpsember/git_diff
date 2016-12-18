@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'git_repo'
+require "json"
 require_relative 'git_diff/hunk'
 require_relative 'git_diff/fileentry'
 require_relative 'git_diff/app'
@@ -16,6 +17,7 @@ HUNK_ACCEPTED = 2
 class GitDiff
 
   @@text_extensions = nil
+  @@defaults = nil
 
   def initialize(commit_name = nil, verbose = false)
     @verbose = verbose
@@ -32,7 +34,9 @@ class GitDiff
     @file_entries[index]
   end
 
-  def hunk_display(file_entry, hunk, screen_width = 164, horizontal_offset=0)
+  def hunk_display(file_entry, hunk,  horizontal_offset=0)
+    screen_width = get_defaults["screen_width"]
+
     a = []
     b = []
     c = []
@@ -243,6 +247,7 @@ class GitDiff
 
   def read_unified_header
     x = peek
+    return nil if x.nil?
 
     if x.start_with?('Binary files')
       read_line
@@ -363,6 +368,17 @@ class GitDiff
       y += c
     end
     y
+  end
+
+  def get_defaults
+    if @@defaults.nil?
+      path = "#{Dir.home}/.gitdiff_defaults"
+      text = FileUtils.read_text_file(path,"{}")
+      @@defaults = JSON.parse(text)
+
+      @@defaults["screen_width"] ||= 164
+    end
+    @@defaults
   end
 
 end

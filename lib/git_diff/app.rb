@@ -148,7 +148,7 @@ class GitDiffApp
       end
       alternate ^= true
 
-      x = @gitdiff.hunk_display(file_ent,h,140,horizontal_offset)
+      x = @gitdiff.hunk_display(file_ent,h,horizontal_offset)
       puts x
 
       while !@quit_flag
